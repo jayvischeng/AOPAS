@@ -1,0 +1,3182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1449</width>
+    <height>664</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::CustomContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="documentMode">
+   <bool>true</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="MatplotlibWidget" name="mplwidget" native="true">
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::ActionsContextMenu</enum>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Figure&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;BBBBBBBBBBBBB&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_7"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1449</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>编辑(E)</string>
+    </property>
+    <addaction name="actionE1"/>
+    <addaction name="separator"/>
+    <addaction name="actionE2"/>
+    <addaction name="separator"/>
+    <addaction name="actionE3"/>
+    <addaction name="separator"/>
+    <addaction name="actionE4"/>
+    <addaction name="separator"/>
+    <addaction name="actionE5"/>
+   </widget>
+   <widget class="QMenu" name="menu_T">
+    <property name="title">
+     <string>参数设置(T)</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionT1"/>
+    <addaction name="separator"/>
+    <addaction name="actionT2"/>
+   </widget>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>帮助(H)</string>
+    </property>
+    <addaction name="actionH1"/>
+    <addaction name="separator"/>
+    <addaction name="action_24"/>
+    <addaction name="separator"/>
+    <addaction name="action_25"/>
+    <addaction name="separator"/>
+    <addaction name="action_26"/>
+   </widget>
+   <widget class="QMenu" name="menu_V">
+    <property name="title">
+     <string>视图(V)</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>终端控制台</string>
+     </property>
+     <addaction name="actionQueryConsole"/>
+     <addaction name="separator"/>
+     <addaction name="actionDataProcess"/>
+     <addaction name="separator"/>
+     <addaction name="actionDataCompression"/>
+     <addaction name="separator"/>
+     <addaction name="actionPython"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="actionV1"/>
+    <addaction name="separator"/>
+    <addaction name="actionV2"/>
+    <addaction name="separator"/>
+    <addaction name="menu"/>
+    <addaction name="separator"/>
+    <addaction name="actionV4"/>
+    <addaction name="separator"/>
+    <addaction name="actionV5"/>
+   </widget>
+   <widget class="QMenu" name="menu_D">
+    <property name="title">
+     <string>数据库(D)</string>
+    </property>
+    <addaction name="actionD1"/>
+    <addaction name="separator"/>
+    <addaction name="actionD2"/>
+    <addaction name="separator"/>
+    <addaction name="actionD3"/>
+    <addaction name="separator"/>
+    <addaction name="actionD4"/>
+    <addaction name="separator"/>
+    <addaction name="actionD5"/>
+   </widget>
+   <widget class="QMenu" name="menu_P">
+    <property name="title">
+     <string>绘图(P)</string>
+    </property>
+    <widget class="QMenu" name="menu_XYY_3">
+     <property name="title">
+      <string>三维 XYY(3)</string>
+     </property>
+     <addaction name="action_5"/>
+     <addaction name="separator"/>
+     <addaction name="actionS"/>
+     <addaction name="separator"/>
+     <addaction name="action_Wall"/>
+     <addaction name="separator"/>
+     <addaction name="action_6"/>
+    </widget>
+    <widget class="QMenu" name="menu_XYZ_Z">
+     <property name="title">
+      <string>三维 XYZ(Z)</string>
+     </property>
+     <addaction name="action_8"/>
+     <addaction name="separator"/>
+     <addaction name="action_9"/>
+    </widget>
+    <addaction name="actionP1"/>
+    <addaction name="separator"/>
+    <addaction name="actionP_Line"/>
+    <addaction name="separator"/>
+    <addaction name="actionP_Point"/>
+    <addaction name="separator"/>
+    <addaction name="actionP_LinePoint"/>
+    <addaction name="separator"/>
+    <addaction name="actionPline1"/>
+    <addaction name="action2_D"/>
+    <addaction name="separator"/>
+    <addaction name="actionP5"/>
+    <addaction name="separator"/>
+    <addaction name="actionP4"/>
+    <addaction name="actionPline2"/>
+    <addaction name="separator"/>
+    <addaction name="menu_XYY_3"/>
+    <addaction name="separator"/>
+    <addaction name="menu_XYZ_Z"/>
+    <addaction name="separator"/>
+    <addaction name="action_7"/>
+   </widget>
+   <widget class="QMenu" name="menu_S">
+    <property name="title">
+     <string>数据源(S)</string>
+    </property>
+    <widget class="QMenu" name="menu_F">
+     <property name="title">
+      <string>文件系统..(F)</string>
+     </property>
+     <addaction name="action_f1"/>
+     <addaction name="separator"/>
+     <addaction name="action_f2"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="action_StartDialog"/>
+    <addaction name="actionS1"/>
+    <addaction name="separator"/>
+    <addaction name="menu_F"/>
+    <addaction name="separator"/>
+    <addaction name="actionS3"/>
+    <addaction name="separator"/>
+    <addaction name="actionS4"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionS5"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_A_2">
+    <property name="title">
+     <string>处理分析(A)</string>
+    </property>
+    <widget class="QMenu" name="menu_2">
+     <property name="title">
+      <string>区域排序</string>
+     </property>
+     <addaction name="actionAscend"/>
+     <addaction name="separator"/>
+     <addaction name="actionDescend"/>
+    </widget>
+    <addaction name="action"/>
+    <addaction name="separator"/>
+    <addaction name="action_16"/>
+    <addaction name="separator"/>
+    <addaction name="menu_2"/>
+    <addaction name="separator"/>
+    <addaction name="action_FFT"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>工具(K)</string>
+    </property>
+    <addaction name="action_18"/>
+    <addaction name="separator"/>
+    <addaction name="action_19"/>
+    <addaction name="separator"/>
+    <addaction name="actionS_2"/>
+    <addaction name="separator"/>
+    <addaction name="actionB"/>
+    <addaction name="separator"/>
+    <addaction name="actionPython_2"/>
+   </widget>
+   <addaction name="menu_S"/>
+   <addaction name="menu_D"/>
+   <addaction name="menu_E"/>
+   <addaction name="menu_V"/>
+   <addaction name="menu_P"/>
+   <addaction name="menu_A_2"/>
+   <addaction name="menu_T"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_H"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_compare">
+   <property name="toolTip">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;对比分析&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="windowTitle">
+    <string>对比分析</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_7">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="MatplotlibWidget" name="mplwidget_2" native="true"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="MatplotlibWidget" name="mplwidget_3" native="true"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_Control">
+   <property name="minimumSize">
+    <size>
+     <width>972</width>
+     <height>365</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>524287</width>
+     <height>365</height>
+    </size>
+   </property>
+   <property name="toolTip">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;用户控制台&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 10pt &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="windowTitle">
+    <string>用户控制台</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_Control">
+    <layout class="QGridLayout" name="gridLayout_6">
+     <item row="0" column="0">
+      <widget class="QTabWidget" name="tabWidget_3">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>9</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="toolTip">
+        <string comment="a" extracomment="b"/>
+       </property>
+       <property name="statusTip">
+        <string comment="c" extracomment="d"/>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;微软雅黑&quot;;</string>
+       </property>
+       <property name="tabShape">
+        <enum>QTabWidget::Rounded</enum>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <property name="documentMode">
+        <bool>false</bool>
+       </property>
+       <property name="tabsClosable">
+        <bool>false</bool>
+       </property>
+       <property name="movable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="tab_6">
+        <attribute name="title">
+         <string>Python 输入控制台</string>
+        </attribute>
+        <attribute name="toolTip">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Python 控制台&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QToolButton" name="toolButton">
+             <property name="toolTip">
+              <string>Run</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 85, 255);
+font: 75 10pt &quot;Candara&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Run</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normalon>:/ProjectImages/201211.ico</normalon>
+              </iconset>
+             </property>
+             <property name="popupMode">
+              <enum>QToolButton::InstantPopup</enum>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonIconOnly</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButton_2">
+             <property name="toolTip">
+              <string>Refresh</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 85, 255);
+font: 75 10pt &quot;Candara&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Restart</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normalon>:/ProjectImages/refresh.png</normalon>
+              </iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButton_3">
+             <property name="toolTip">
+              <string>Debug</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 85, 255);
+font: 75 10pt &quot;Candara&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Debug</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normalon>:/ProjectImages/logout.png</normalon>
+              </iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButton_print">
+             <property name="toolTip">
+              <string>Print</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 85, 255);
+font: 75 10pt &quot;Candara&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Print</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normalon>:/ProjectImages/printer.png</normalon>
+              </iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_33">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>31</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>31</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>31</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>31</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>31</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>31</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_14">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>31</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_15">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_16">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>31</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_17">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_18">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>31</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_19">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_20">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>31</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_21">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_22">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_23">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>31</width>
+               <height>25</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_5">
+        <attribute name="title">
+         <string>单表查询</string>
+        </attribute>
+        <attribute name="toolTip">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;查询控制台&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_9">
+         <item row="0" column="1">
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <spacer name="horizontalSpacer_32">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <widget class="QSplitter" name="splitter_14">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <widget class="QSplitter" name="splitter_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <widget class="QLabel" name="label_11">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 75 12pt &quot;DFKai-SB&quot;;</string>
+               </property>
+               <property name="text">
+                <string>起始</string>
+               </property>
+              </widget>
+              <widget class="QDateTimeEdit" name="ddateTimeEdit1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="autoFillBackground">
+                <bool>false</bool>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(113, 113, 113);
+font: 75 12pt &quot;Calibri&quot;;
+color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="dateTime">
+                <datetime>
+                 <hour>0</hour>
+                 <minute>0</minute>
+                 <second>0</second>
+                 <year>2012</year>
+                 <month>3</month>
+                 <day>31</day>
+                </datetime>
+               </property>
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QSplitter" name="splitter_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <widget class="QLabel" name="label_12">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 75 12pt &quot;DFKai-SB&quot;;</string>
+               </property>
+               <property name="text">
+                <string>终止</string>
+               </property>
+              </widget>
+              <widget class="QDateTimeEdit" name="ddateTimeEdit2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(113, 113, 113);
+font: 75 12pt &quot;Calibri&quot;;
+color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="dateTime">
+                <datetime>
+                 <hour>0</hour>
+                 <minute>0</minute>
+                 <second>0</second>
+                 <year>2012</year>
+                 <month>5</month>
+                 <day>1</day>
+                </datetime>
+               </property>
+               <property name="date">
+                <date>
+                 <year>2012</year>
+                 <month>5</month>
+                 <day>1</day>
+                </date>
+               </property>
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+               <property name="timeSpec">
+                <enum>Qt::OffsetFromUTC</enum>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QSplitter" name="splitter_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <widget class="QLabel" name="label_4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 75 12pt &quot;DFKai-SB&quot;;</string>
+               </property>
+               <property name="text">
+                <string>地点</string>
+               </property>
+              </widget>
+              <widget class="QComboBox" name="dcombox_place">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 75 12pt &quot;DFKai-SB&quot;;</string>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QSplitter" name="splitter_10">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <widget class="QLabel" name="label_15">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 75 12pt &quot;DFKai-SB&quot;;</string>
+               </property>
+               <property name="text">
+                <string>仪器</string>
+               </property>
+              </widget>
+              <widget class="QComboBox" name="dcombox_name">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>DFKai-SB</family>
+                 <pointsize>12</pointsize>
+                 <weight>9</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 75 12pt &quot;DFKai-SB&quot;;</string>
+               </property>
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <property name="maxVisibleItems">
+                <number>12</number>
+               </property>
+               <property name="sizeAdjustPolicy">
+                <enum>QComboBox::AdjustToContents</enum>
+               </property>
+               <item>
+                <property name="text">
+                 <string>选择仪器</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>近地面测量系统</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>湍流探测激光雷达</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Airda16000低平流层风廓线雷达</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>全天空成像仪</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>大孔径闪烁仪</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>POM-02太阳辐射计</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>DTF太阳辐射计</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>PGS太阳辐射计</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>温度脉动仪</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>自动气象站，CO2传感器</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>常规气象参数测量系统</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>图像采集系统</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>光纤湍流测量系统</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>大气能见度仪</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>光学粒子计数器</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>微脉冲激光雷达</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>光纤光谱仪</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>APS3321</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>炭黑仪，浊度计</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>手持太阳辐射计</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>车载风雷达</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>大气相干长度仪</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>天空亮度仪</string>
+                </property>
+               </item>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+           <item row="4" column="0" rowspan="2" colspan="2">
+            <spacer name="horizontalSpacer_30">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0">
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <spacer name="horizontalSpacer_31">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="2" rowspan="3">
+          <widget class="Line" name="line_1">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(170, 170, 255);</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3" rowspan="3">
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QSplitter" name="splitter_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <widget class="QLabel" name="label_13">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font: 75 12pt &quot;DFKai-SB&quot;;</string>
+              </property>
+              <property name="text">
+               <string>字段</string>
+              </property>
+             </widget>
+             <widget class="QComboBox" name="dcombox_index">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font: 75 12pt &quot;Calibri&quot;;</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSplitter" name="splitter_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <widget class="QLabel" name="label_14">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font: 75 12pt &quot;DFKai-SB&quot;;</string>
+              </property>
+              <property name="text">
+               <string>条件</string>
+              </property>
+             </widget>
+             <widget class="QComboBox" name="dcombox_con">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font: 75 12pt &quot;Calibri&quot;;</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>&gt;...</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>&lt;...</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>=...</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>between...and...</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>is</string>
+               </property>
+              </item>
+             </widget>
+             <widget class="QLineEdit" name="dlineEdit1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="dlineEdit2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_15">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QSplitter" name="splitter_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <widget class="QWidget" name="layoutWidget">
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QPushButton" name="dpb_add">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 75 12pt &quot;DFKai-SB&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>添加</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="dpb_delete1">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="baseSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 75 12pt &quot;DFKai-SB&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>删除</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="dpb_clear">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="baseSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 75 12pt &quot;DFKai-SB&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>清空</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_29">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QListWidget" name="dlistWidget">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(205, 240, 211);</string>
+              </property>
+              <property name="isWrapping" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="layoutMode">
+               <enum>QListView::SinglePass</enum>
+              </property>
+              <property name="selectionRectVisible">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="4">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QLabel" name="label_26">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(85, 85, 255);
+font: 75 9pt &quot;Euclid Fraktur&quot;;</string>
+           </property>
+           <property name="text">
+            <string>This A Python&amp;Qt Work!Welcome To Database System!</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="4">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="5">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QSplitter" name="splitter">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <widget class="QWidget" name="widget_2" native="true">
+            <property name="styleSheet">
+             <string notr="true">image: url(:/ProjectImages/zky.jpg);</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_30">
+            <property name="styleSheet">
+             <string notr="true">font: 75 10pt &quot;黑体&quot;;</string>
+            </property>
+            <property name="text">
+             <string>  大气光学特性研究室</string>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+        <zorder>line_1</zorder>
+        <zorder>label_6</zorder>
+        <zorder>label_2</zorder>
+        <zorder>label_5</zorder>
+        <zorder></zorder>
+        <zorder>label_26</zorder>
+        <zorder>splitter</zorder>
+       </widget>
+       <widget class="QWidget" name="tab_4">
+        <attribute name="title">
+         <string>数据压缩</string>
+        </attribute>
+        <attribute name="toolTip">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;数据分析&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_15">
+           <item>
+            <widget class="QSplitter" name="splitter_13">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <widget class="QLabel" name="label_17">
+              <property name="styleSheet">
+               <string notr="true">font: 75 10pt &quot;DFKai-SB&quot;;</string>
+              </property>
+              <property name="text">
+               <string>第</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="t5spinBox1">
+              <property name="value">
+               <number>2</number>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_10">
+              <property name="styleSheet">
+               <string notr="true">font: 75 10pt &quot;DFKai-SB&quot;;</string>
+              </property>
+              <property name="text">
+               <string>列</string>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QPushButton" name="t5pushButton_okall">
+               <property name="styleSheet">
+                <string notr="true">font: 75 10pt &quot;DFKai-SB&quot;;</string>
+               </property>
+               <property name="text">
+                <string>全选</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_27">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <widget class="QPushButton" name="t5pushButton_cancel">
+               <property name="styleSheet">
+                <string notr="true">font: 75 10pt &quot;DFKai-SB&quot;;</string>
+               </property>
+               <property name="text">
+                <string>取消</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_28">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item>
+            <widget class="QLabel" name="label_20">
+             <property name="styleSheet">
+              <string notr="true">font: 75 10pt &quot;DFKai-SB&quot;;</string>
+             </property>
+             <property name="text">
+              <string>分段算法</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBox_PAA">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>PAA</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBox_PLREFP">
+             <property name="text">
+              <string>PLR_EFP</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBox_SW">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>SW</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBox_BU">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>BU</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item>
+            <widget class="QLabel" name="label_18">
+             <property name="styleSheet">
+              <string notr="true">font: 75 10pt &quot;DFKai-SB&quot;;</string>
+             </property>
+             <property name="text">
+              <string>阈值参数</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="t5spinBoxPAA1">
+             <property name="maximum">
+              <number>99999</number>
+             </property>
+             <property name="value">
+              <number>5</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_11">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="t5spinBoxPLREFP1">
+             <property name="maximum">
+              <number>99999</number>
+             </property>
+             <property name="value">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_13">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_12">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="t5doubleSpinBoxSW1">
+             <property name="singleStep">
+              <double>0.010000000000000</double>
+             </property>
+             <property name="value">
+              <double>0.100000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_15">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_14">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="t5doubleSpinBoxBU1">
+             <property name="singleStep">
+              <double>0.010000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <item>
+            <widget class="QLabel" name="label_25">
+             <property name="styleSheet">
+              <string notr="true">font: 75 10pt &quot;DFKai-SB&quot;;</string>
+             </property>
+             <property name="text">
+              <string>压缩度</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="t5lineEdit_PAA2">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(232, 232, 232);</string>
+             </property>
+             <property name="frame">
+              <bool>true</bool>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Normal</enum>
+             </property>
+             <property name="dragEnabled">
+              <bool>false</bool>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_16">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_17">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="t5lineEdit_PLREFP2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(232, 232, 232);</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_18">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_19">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="t5lineEdit_SW2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(232, 232, 232);</string>
+             </property>
+             <property name="dragEnabled">
+              <bool>false</bool>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_20">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_21">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="t5lineEdit_BU2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(232, 232, 232);</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item>
+            <widget class="QLabel" name="label_21">
+             <property name="styleSheet">
+              <string notr="true">font: 75 10pt &quot;DFKai-SB&quot;;</string>
+             </property>
+             <property name="text">
+              <string>拟合误差</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="t5lineEdit_PAA3">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(232, 232, 232);</string>
+             </property>
+             <property name="dragEnabled">
+              <bool>false</bool>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_23">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_22">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="t5lineEdit_PLREFP3">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(232, 232, 232);</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_24">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_25">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="t5lineEdit_SW3">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(232, 232, 232);</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_27">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_26">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="t5lineEdit_BU3">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(232, 232, 232);</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_database">
+   <property name="toolTip">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;数据库&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 10pt &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetClosable|QDockWidget::DockWidgetFloatable</set>
+   </property>
+   <property name="windowTitle">
+    <string>数据库表</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_1">
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QTableView" name="dtableView">
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">gridline-color: rgb(0, 170, 255);
+selection-background-color: rgb(71, 71, 71);</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSplitter" name="splitter_9">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QCheckBox" name="dcheckBoxX">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>X</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="dlineEdit_X">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="dcheckBoxY">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Y</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="dlineEdit_Y">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="dcheckBoxZ">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Z</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="dlineEdit_Z">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSplitter" name="splitter_8">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QLabel" name="dlabel_serverinfo">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>服务器：</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="dlabel_serverinfo_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>当前用户：</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_19">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>时间：</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="dlabel_time">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 170, 255);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="dlabel_Col">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_23">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>列</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="dlabel_Row">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_24">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>行</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar_1">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpenFolder"/>
+   <addaction name="separator"/>
+   <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionCopy"/>
+   <addaction name="separator"/>
+   <addaction name="actionLoginIn"/>
+   <addaction name="separator"/>
+   <addaction name="actionDataBase"/>
+   <addaction name="separator"/>
+   <addaction name="actionSetting"/>
+   <addaction name="separator"/>
+   <addaction name="actionDetail"/>
+   <addaction name="separator"/>
+   <addaction name="actionCalender"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_3</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionShujuQX"/>
+   <addaction name="separator"/>
+   <addaction name="actionControl"/>
+   <addaction name="separator"/>
+   <addaction name="actionMain"/>
+   <addaction name="separator"/>
+   <addaction name="actionCompare"/>
+   <addaction name="separator"/>
+   <addaction name="actionTrend"/>
+   <addaction name="separator"/>
+   <addaction name="actionStatistics"/>
+   <addaction name="separator"/>
+   <addaction name="actionPLR"/>
+   <addaction name="separator"/>
+   <addaction name="actionCluster"/>
+   <addaction name="separator"/>
+   <addaction name="actionRuleFinder"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_3">
+   <property name="windowTitle">
+    <string>toolBar_4</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionDpb_Plot"/>
+   <addaction name="separator"/>
+   <addaction name="actionDpb_Query"/>
+   <addaction name="separator"/>
+   <addaction name="actionDpb_Delete"/>
+   <addaction name="separator"/>
+   <addaction name="actionImport"/>
+   <addaction name="separator"/>
+   <addaction name="actionLoginOut"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_calender">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;日历&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 10pt &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="windowTitle">
+    <string>日历</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout_18">
+     <item>
+      <widget class="QCalendarWidget" name="calendarWidget">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(170, 170, 255);</string>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::ImhNone</set>
+       </property>
+       <property name="gridVisible">
+        <bool>true</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QCalendarWidget::SingleSelection</enum>
+       </property>
+       <property name="horizontalHeaderFormat">
+        <enum>QCalendarWidget::ShortDayNames</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar_4">
+   <property name="windowTitle">
+    <string>toolBar_4</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_Detail">
+   <property name="maximumSize">
+    <size>
+     <width>524287</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <property name="toolTip">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;详细信息&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="windowTitle">
+    <string>数据处理</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_3">
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QTableView" name="tableView">
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionOpenFolder">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/open.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/save.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>a2</string>
+   </property>
+   <property name="toolTip">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/copy.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>a3</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;SQL导出&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionLoginIn">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/user.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>a4</string>
+   </property>
+   <property name="toolTip">
+    <string>登录</string>
+   </property>
+  </action>
+  <action name="actionDataBase">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/database.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>a5</string>
+   </property>
+   <property name="toolTip">
+    <string>数据库</string>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+   <property name="softKeyRole">
+    <enum>QAction::NoSoftKey</enum>
+   </property>
+  </action>
+  <action name="actionControl">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/process.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>a6</string>
+   </property>
+   <property name="toolTip">
+    <string>用户控制台</string>
+   </property>
+  </action>
+  <action name="actionCompare">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/compare.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>a7</string>
+   </property>
+   <property name="toolTip">
+    <string>对比分析</string>
+   </property>
+  </action>
+  <action name="actionTrend">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/statistics.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>a8</string>
+   </property>
+   <property name="toolTip">
+    <string>趋势分析</string>
+   </property>
+  </action>
+  <action name="actionStatistics">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/trend.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>a9</string>
+   </property>
+   <property name="toolTip">
+    <string>统计分析</string>
+   </property>
+  </action>
+  <action name="actionPLR">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/PLR.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>a10</string>
+   </property>
+   <property name="toolTip">
+    <string>数据分段</string>
+   </property>
+  </action>
+  <action name="actionCluster">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/cluster.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>a11</string>
+   </property>
+   <property name="toolTip">
+    <string>聚类</string>
+   </property>
+  </action>
+  <action name="actionRuleFinder">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/search.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>a12</string>
+   </property>
+   <property name="toolTip">
+    <string>规则提取</string>
+   </property>
+  </action>
+  <action name="actionSetting">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/options_2.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>a13</string>
+   </property>
+   <property name="toolTip">
+    <string>设置</string>
+   </property>
+  </action>
+  <action name="actionA14">
+   <property name="text">
+    <string>a14</string>
+   </property>
+  </action>
+  <action name="actionA15">
+   <property name="text">
+    <string>a15</string>
+   </property>
+  </action>
+  <action name="actionS1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>连接数据库..(D)</string>
+   </property>
+  </action>
+  <action name="actionS5">
+   <property name="text">
+    <string>退出..(Q)</string>
+   </property>
+   <property name="iconText">
+    <string>退出..(Q)</string>
+   </property>
+   <property name="toolTip">
+    <string>退出..(Q)</string>
+   </property>
+  </action>
+  <action name="actionE1">
+   <property name="text">
+    <string>撤销(U).....Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionE3">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/copy.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>复制(C).....Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionE4">
+   <property name="text">
+    <string>粘贴(P).....Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionE5">
+   <property name="text">
+    <string>剪切(T).....Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionT1">
+   <property name="text">
+    <string>数据库设置(S)</string>
+   </property>
+  </action>
+  <action name="actionT2">
+   <property name="text">
+    <string>远程连接(R)</string>
+   </property>
+  </action>
+  <action name="actionH1">
+   <property name="text">
+    <string>API Help</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>版本介绍(I)</string>
+   </property>
+  </action>
+  <action name="actionQA">
+   <property name="text">
+    <string>QA</string>
+   </property>
+  </action>
+  <action name="actionQA_2">
+   <property name="text">
+    <string>QA</string>
+   </property>
+  </action>
+  <action name="actionDpb_Plot">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/pencil_edit.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>dpb_Plot</string>
+   </property>
+   <property name="toolTip">
+    <string>绘图</string>
+   </property>
+  </action>
+  <action name="actionDpb_Query">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/play.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>dpb_Query</string>
+   </property>
+   <property name="toolTip">
+    <string>查询</string>
+   </property>
+  </action>
+  <action name="actionDpb_Delete">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/cut.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>dpb_Delete</string>
+   </property>
+   <property name="toolTip">
+    <string>删除</string>
+   </property>
+  </action>
+  <action name="actionCalender">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/calendar.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Calender</string>
+   </property>
+  </action>
+  <action name="actionImport">
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/arrow_left.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Import</string>
+   </property>
+   <property name="iconText">
+    <string>Import</string>
+   </property>
+   <property name="toolTip">
+    <string>导入</string>
+   </property>
+  </action>
+  <action name="actionV1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>数据库窗口</string>
+   </property>
+  </action>
+  <action name="actionV2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>对比分析</string>
+   </property>
+  </action>
+  <action name="actionV4">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>详细信息</string>
+   </property>
+  </action>
+  <action name="actionV5">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>日历</string>
+   </property>
+  </action>
+  <action name="actionD1">
+   <property name="text">
+    <string>数据库登录..(L)</string>
+   </property>
+  </action>
+  <action name="actionD2">
+   <property name="text">
+    <string>数据导入..(I)</string>
+   </property>
+  </action>
+  <action name="actionD3">
+   <property name="text">
+    <string>数据删除..(R)</string>
+   </property>
+  </action>
+  <action name="actionD4">
+   <property name="text">
+    <string>数据查询..(Q)</string>
+   </property>
+  </action>
+  <action name="action_f1">
+   <property name="text">
+    <string>打开文件(O)</string>
+   </property>
+  </action>
+  <action name="action_f2">
+   <property name="text">
+    <string>打开文件夹(S)</string>
+   </property>
+  </action>
+  <action name="actionP1">
+   <property name="text">
+    <string>快速绘图(K)</string>
+   </property>
+  </action>
+  <action name="actionPline1">
+   <property name="text">
+    <string>---------------------</string>
+   </property>
+  </action>
+  <action name="actionP5">
+   <property name="text">
+    <string>2-D柱状图(C)</string>
+   </property>
+  </action>
+  <action name="actionP4">
+   <property name="text">
+    <string>2-D饼状图(E)</string>
+   </property>
+  </action>
+  <action name="actionPline2">
+   <property name="text">
+    <string>---------------------</string>
+   </property>
+  </action>
+  <action name="actionLoginOut">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/ProjectImages/logout.png</normaloff>:/ProjectImages/logout.png</iconset>
+   </property>
+   <property name="text">
+    <string>loginout</string>
+   </property>
+   <property name="toolTip">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="actionA_2">
+   <property name="text">
+    <string>A</string>
+   </property>
+  </action>
+  <action name="actionShujuQX">
+   <property name="icon">
+    <iconset resource="Image.qrc">
+     <normaloff>:/ProjectImages/refresh.png</normaloff>:/ProjectImages/refresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>A</string>
+   </property>
+   <property name="iconText">
+    <string>QingXi</string>
+   </property>
+   <property name="toolTip">
+    <string>数据清洗</string>
+   </property>
+  </action>
+  <action name="actionD5">
+   <property name="text">
+    <string>数据下载..(X)</string>
+   </property>
+  </action>
+  <action name="actionS1_2">
+   <property name="text">
+    <string>连接数据库</string>
+   </property>
+  </action>
+  <action name="actionS3">
+   <property name="text">
+    <string>保存..(S)</string>
+   </property>
+   <property name="iconText">
+    <string>保存..(S)</string>
+   </property>
+   <property name="toolTip">
+    <string>保存..(S)</string>
+   </property>
+  </action>
+  <action name="actionS4">
+   <property name="text">
+    <string>另存为..(A)</string>
+   </property>
+   <property name="iconText">
+    <string>另存为..(A)</string>
+   </property>
+   <property name="toolTip">
+    <string>另存为..(A)</string>
+   </property>
+  </action>
+  <action name="actionDetail">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/detail.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>D</string>
+   </property>
+   <property name="toolTip">
+    <string>详细信息</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::TextHeuristicRole</enum>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionAAAA">
+   <property name="text">
+    <string>AAAA</string>
+   </property>
+  </action>
+  <action name="actionMain">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/ProjectImages/201211.ico</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Main</string>
+   </property>
+  </action>
+  <action name="actionQueryConsole">
+   <property name="text">
+    <string>查询控制台</string>
+   </property>
+  </action>
+  <action name="actionDataProcess">
+   <property name="text">
+    <string>数据处理</string>
+   </property>
+  </action>
+  <action name="actionDataCompression">
+   <property name="text">
+    <string>数据压缩</string>
+   </property>
+  </action>
+  <action name="actionPython">
+   <property name="text">
+    <string>Python控制台</string>
+   </property>
+  </action>
+  <action name="actionE2">
+   <property name="text">
+    <string>重做(R).....Ctrl+R</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>快速扩展</string>
+   </property>
+  </action>
+  <action name="actionAscend">
+   <property name="text">
+    <string>升序</string>
+   </property>
+  </action>
+  <action name="actionDescend">
+   <property name="text">
+    <string>降序</string>
+   </property>
+  </action>
+  <action name="action_FFT">
+   <property name="text">
+    <string>快速FFT变换</string>
+   </property>
+  </action>
+  <action name="actionP_Line">
+   <property name="text">
+    <string>直线图(L)</string>
+   </property>
+  </action>
+  <action name="actionP_Point">
+   <property name="text">
+    <string>点状图(S)</string>
+   </property>
+  </action>
+  <action name="actionP_LinePoint">
+   <property name="text">
+    <string>直线+点(Y)</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>极坐标(P)</string>
+   </property>
+  </action>
+  <action name="action2_D">
+   <property name="text">
+    <string>2-D条形图(B)</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>三维条形图(B)</string>
+   </property>
+  </action>
+  <action name="actionS">
+   <property name="text">
+    <string>三维带形图(R)</string>
+   </property>
+  </action>
+  <action name="action_Wall">
+   <property name="text">
+    <string>三维Wall(W)</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>三维瀑布(F)</string>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="text">
+    <string>三维描点(S)</string>
+   </property>
+  </action>
+  <action name="action_9">
+   <property name="text">
+    <string>三维轨道(T)</string>
+   </property>
+  </action>
+  <action name="action_16">
+   <property name="text">
+    <string>数据处理</string>
+   </property>
+  </action>
+  <action name="action_18">
+   <property name="text">
+    <string>线性拟合</string>
+   </property>
+  </action>
+  <action name="action_19">
+   <property name="text">
+    <string>多项式拟合</string>
+   </property>
+  </action>
+  <action name="actionS_2">
+   <property name="text">
+    <string>S曲线拟合</string>
+   </property>
+  </action>
+  <action name="actionB">
+   <property name="text">
+    <string>比较拟合</string>
+   </property>
+  </action>
+  <action name="actionPython_2">
+   <property name="text">
+    <string>Python控制台</string>
+   </property>
+  </action>
+  <action name="action_24">
+   <property name="text">
+    <string>在线注册</string>
+   </property>
+  </action>
+  <action name="action_25">
+   <property name="text">
+    <string>关于本系统</string>
+   </property>
+  </action>
+  <action name="action_26">
+   <property name="text">
+    <string>联系我们</string>
+   </property>
+  </action>
+  <action name="action_StartDialog">
+   <property name="text">
+    <string>导航控制台...(Start)</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MatplotlibWidget</class>
+   <extends>QWidget</extends>
+   <header>matplotlibwidget</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="Image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
