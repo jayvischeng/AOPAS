@@ -1,0 +1,33 @@
+<RCC>
+  <qresource>
+    <file>ProjectImages/detail.png</file>
+    <file>ProjectImages/logout.png</file>
+    <file>ProjectImages/refresh.png</file>
+    <file>ProjectImages/arrow_left.png</file>
+    <file>ProjectImages/play.png</file>
+    <file>ProjectImages/lamp_active.png</file>
+    <file>ProjectImages/pencil_edit.png</file>
+    <file>ProjectImages/stop_2.png</file>
+    <file>ProjectImages/cluster.png</file>
+    <file>ProjectImages/calendar.png</file>
+    <file>ProjectImages/database.png</file>
+    <file>ProjectImages/201211.ico</file>
+    <file>ProjectImages/calendar.png</file>
+    <file>ProjectImages/compare.png</file>
+    <file>ProjectImages/copy.png</file>
+    <file>ProjectImages/cut.png</file>
+    <file>ProjectImages/database.png</file>
+    <file>ProjectImages/download.png</file>
+    <file>ProjectImages/open.png</file>
+    <file>ProjectImages/options_2.png</file>
+    <file>ProjectImages/PLR.png</file>
+    <file>ProjectImages/printer.png</file>
+    <file>ProjectImages/process.png</file>
+    <file>ProjectImages/save.png</file>
+    <file>ProjectImages/search.png</file>
+    <file>ProjectImages/statistics.png</file>
+    <file>ProjectImages/trend.png</file>
+    <file>ProjectImages/user.png</file>
+    <file>ProjectImages/zky.jpg</file>
+  </qresource>
+</RCC>

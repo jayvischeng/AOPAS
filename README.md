@@ -1,0 +1,14 @@
+AOPAS
+=====
+
+A PyQt/Numpy/Pandas/Matplotlib Program! 
+This is a python program designed for meteological data use such as crud , display ,compute and data mining.
+The developing environment and main python packages:
+    python2.7
+    pyodbc3.0.7
+    numpy1.8.0
+    pandas0.12.0
+    matplotlib1.3.1
+    PyQt4.11
+    PyInstaller2.1
+The IDE is Eric4 and PyCharm!
