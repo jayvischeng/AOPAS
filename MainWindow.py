@@ -77,11 +77,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		QMainWindow.__init__(self, parent)
 		self.setupUi(self)
 
-		#self.verticalLayout_6 = QtGui.QVBoxLayout(self.tab_6)
-		#self.verticalLayout_6.setObjectName(_fromUtf8("verticalLayout_6"))
-		#self.textEdit_5 = QtGui.QTextEdit(self.tab_6)
-		#self.textEdit_5.setObjectName(_fromUtf8("textEdit_5"))
-		#self.verticalLayout_6.addWidget(self.textEdit_5)
+
 		self.console = Console(startup_message=welcome_message)
 		self.console.setStyleSheet(_fromUtf8("font: 75 11pt \"微软雅黑\";\n"
 											 "background-color: rgb(245, 245, 245);\n"
@@ -90,10 +86,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.verticalLayout_6.addWidget(self.console)
 		self.console.updateNamespace({'myVar1': app, 'myVar2': 1234})
 
-		#        self.form=Form()
-		#        self.verticalLayout_4.setDirection(QBoxLayout.BottomToTop)
-		#        self.verticalLayout_4.setStretch(-1, -1)
-		#        self.verticalLayout_4.addWidget(self.form.widget)
+
 
 		self.openFilesPath = ""
 		self.userFlag=False
@@ -249,33 +242,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 		self.toolButton_print.clicked.connect(self.Print)
 		#-------------------------------------------------------
-		"""self.actionMWSetting = QAction(u"背景设置", self.mplwidget)
-		self.mplwidget.addAction(self.actionMWSetting)
-		self.actionMWSetting.setCheckable(True)
-
-		self.MUGroup = QMenu(u"添加", self.mplwidget)
-
-		#        self.mplwidget.addAction(QAction.setAction(self.MUGroup))
-		#        self.actionMWAdd.setCheckable(True)
-
-		self.actionAddLabel = QAction(u"添加标签", self.mplwidget)
-		self.MUGroup.addAction(self.actionAddLabel)
-		self.actionAddLabel.setCheckable(True)
-
-		self.actionAddFormula = QAction(u"添加公式", self.mplwidget)
-		self.MUGroup.addAction(self.actionAddFormula)
-		self.actionAddFormula.setCheckable(True)
-
-		self.mplwidget.addAction(self.MUGroup.menuAction())
-
-		self.actionMClear = QAction(u"清除画布", self.mplwidget)
-		self.mplwidget.addAction(self.actionMClear)
-		#self.actionMClear.setCheckable(True)
-		self.actionMClear.triggered.connect(self.MClear)
-
-		#        self.actionHide.triggered.connect(self.Hello)
-
-		"""
 
 
 		#self.mplwidget.rightMenu.exec_(QtGui.QCursor.pos())
@@ -777,16 +743,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		#time=pandas.tseries.index.DatetimeIndex
 		time=[]
 		for tab in xrange(len(self.df["Time"])):
-			#print self.df["Date"][tab]
-			#print self.df["Date"][tab]
+
 			#print datetime.datetime.strptime(self.df["Date"][tab]+' '+self.df["Time"][tab],'%Y-%m-%d %H:%M:%S')
 			time.append(datetime.datetime.strptime(self.df["Date"][tab]+' '+self.df["Time"][tab],'%Y-%m-%d %H:%M:%S'))
 		#time=pandas.PeriodIndex(time,freq='S')
-		#print type(time[0])
+
 		ts=Series(np.array(self.df[self.df.columns[self.columnChooseIndex[0]+6]]), index=time)
-		#print type(ts.index)
+
 		#self.ts1=pandas.DataFrame({"DateTime":ts.index,self.df.columns[self.columnChooseIndex[0]+6]:ts})
-		#print type(self.ts1.index)
+
 		temps1=ts.resample("5Min")
 		self.ts1=pandas.DataFrame({"DateTime":temps1.index,self.df.columns[self.columnChooseIndex[0]+6]:temps1})
 		self.dataModel = DataFrameModel()
@@ -834,8 +799,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 #数据删除Delete
 	def Delete(self):#数据删除
-		#print self.userFlag
-		#print self.userLimits
 		if self.userFlag==True and self.userLimits==0:
 			try:
 				delete1 = Delete(self)
@@ -860,17 +823,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		process.exec_()
 		time=[]
 		PP=process.combine.split('\\')
-		#print "&&&&&&&&&&&&&&&&&&"
-		#print PP[0]
-		#print PP[1]
+
 		for tab in xrange(len(self.df["Time"])):
 			time.append(datetime.datetime.strptime(self.df["Date"][tab]+' '+self.df["Time"][tab],'%Y-%m-%d %H:%M:%S'))
 		#time=pandas.PeriodIndex(time,freq='S')
-		#print type(time[0])
+
 		ts=Series(np.array(self.df[self.df.columns[self.columnChooseIndex[0]+6]]), index=time)
-		#print type(ts.index)
+
 		#self.ts1=pandas.DataFrame({"DateTime":ts.index,self.df.columns[self.columnChooseIndex[0]+6]:ts})
-		#print type(self.ts1.index)
+
 		#temps1=eval("ts."+str(PP[0])+'.'+'("'+str(PP[1])+'")')
 
 		if str(PP[0])=="resample":
@@ -888,7 +849,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 #数据绘图
 	def Plot(self,action):
 
-		#print self.Yresult
+
 		#self.mplwidget.axes.clear()
 		flag_index=['b','g','r','c','m','y','k','w','b*','g*','r*','c*','m*','y*','k*','w*']
 		if action==self.S:
@@ -902,9 +863,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 			temp=self.YcountA
 		else:
 			temp=self.YcountB
-		#print temp
-		#print self.columnChooseIndex
-		#print len(self.Yresult)
 		self.mplwidget.axes.hold(True)
 		if self.YcountA>1:
 			self.mplwidget.temp1=[]
@@ -922,36 +880,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 				self.mplwidget.axes.plot(self.Xresult, self.Yresult[A],flag_index[A],label=str(self.labelA)+self.df.columns[self.columnChooseIndex[A]+6])
 				self.mplwidget.temp1.append(self.df.columns[self.columnChooseIndex[A]+6])
 			else:
-				#print A
-				#print self.columnChooseIndex[A]
-				#print flag_index[A]
-				#print self.Yresult[A]
 				self.mplwidget.axes.plot(self.Xresult, self.Yresult[A],flag_index[A],label=str(self.labelA)+self.ts1.columns[self.columnChooseIndex[A]])
 				self.mplwidget.temp1.append(self.ts1.columns[self.columnChooseIndex[A]])
-		#self.mplwidget.axes.hold(True)
-		#print "AAAAA"
-		#print temp5
-		#print "BBBBB"
-#self.mplwidget.temp1
-		#temp2=unicode(self.dlineEdit_Y.text()).encode("utf-8").decode("utf-8").split(",")
-		#temp3=[each.split(":") for each in temp2]
-		#for tab in range(self.YcountA):
-			#self.mplwidget.temp1.append(temp3[tab][1])
-		#for tab in range(len(temp5)):
-			#self.mplwidget.temp1.append(temp5[tab])
+
 
 		self.mplwidget.MyLegend(tuple(self.mplwidget.temp1))
-		#print "CCCCCC"
-		#print self.mplwidget.temp1
-		#print "DDDDDD"
-
-		#self.mplwidget.axes.get_lines()[0].get_color()
-		#self.mylegend.get_lines()[0].set_color("r")
 		self.labelA=self.labelA+1
 		self.mplwidget.draw()
-		#print self.navi_toolbar.toolTip()
-		#print self.a.get_lines()[0].set_color(self.a.get_lines()[0].get_color())
-		#print a.get_lines()[0].get_color()
 		#self.mplwidget.draw()
 		#self.mplwidget.axes.clear()
 		#self.mplwidget.draw()
@@ -969,19 +904,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.dlineEdit_X.setText(" ")
 		self.dlineEdit_Y.setText(" ")
 		self.dlineEdit_Z.setText(" ")
-		#tempitems=[]
-		#for tab in range(self.dlistWidget.count()):
-		#if unicode(self.dlistWidget.item(tab).text()).encode("utf-8").replace(" ", "").isdigit()==False:
-		#tempitems.append(unicode(self.dlistWidget.item(tab).text()).encode("utf-8"))
 		self.sqlstrtail = ""
 		for tab1 in range(self.dlistWidget.count()):
 			tempstr = unicode(self.dlistWidget.item(tab1).text()).encode("utf-8")
-			#         templist=tempstr.split("  ")
-			#            for tab2 in range(len(templist)):
-			#               if tab2!=0 and tab2%2==0:
-			#                 templist[tab2]=str(int(templist[tab2]))
-			#     tempstr=" ".join(templist)
-
 			self.sqlstrtail = self.sqlstrtail + " and " + tempstr
 		self.idcount = 0
 		t1 = time.clock()
@@ -990,7 +915,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.dlabel_time.setText("")
 		try:
 			a = unicode(self.dcombox_name.currentText())
-			#print unicode(QString(ssss),'utf-8','ignore')
 			self.tablename = self.tablenamedict[a]
 			#if 'SQLSERVER' in self.host:
 			if 1>0:
@@ -1020,7 +944,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 				sqlstr = "select * from " + self.tablename + self.sqlstr_condition + self.sqlstrtail + " ORDER BY ID ASC"
 				#or "((Year*32141000+Month*2678400+Day*86400+Hour*3600+Minute*60+Second)/100000) between "+str(float(int(date1[0])*32141000+int(date1[1])*2678400+int(date2[2])*86400+int(time1[0])*3600+int(date1[1])*60+int(date2[2]))/100000)\
 				#+" and "+str(float(int(date2[0])*32141000+int(date2[1])*2678400+int(date2[2])*86400+int(time2[0])*3600+int(time2[1])*60+int(date2[2]))/100000)+" ORDER BY ID ASC"
-				#print sqlstr
 				if self.ms.GetConnect() == True:
 					if 1 > 0:
 						#resList=self.ms.ExecQuery(sqlstr)
@@ -1048,101 +971,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 								#self.dataModel.setDataFrame(self.df)
 								self.dataModel.setDataFrame(self.df[names[7:len(names)]])
-								#print self.df[self.df.columns[7:len(names)-1]].describe(20)
 								#sys.stdout=saveout
-								#print type(np.array(self.df["Temperature"]))
-								#print type(pd.DatetimeIndex(self.df["Date"]))
-								#print type(pd.DatetimeIndex(self.df["Date"]))
 								#pd.rolling_sum(self.df, 60).plot(subplots=True)
-
-								#print self.df.cumsum()
-
-
-
-
-
-
 								self.dataModel.signalUpdate()
 								self.dtableView.resizeColumnsToContents()
-
-
 								#self.model.setQuery(sqlstr)
 								#model.setEditStrategy(QtSql.QSqlTableModel.OnManualSubmit)
 								#self.dtableView.setModel(self.model)
-
-
-
 								#设置表头显示与否
 								self.dtableView.verticalHeader().setVisible(False)
 								self.dtableView.horizontalHeader().setMovable(True)
-
-								"""
-								self.PlotMenu = QtGui.QMenu(u"绘制图形..(P)", self)
-								self.L=QtGui.QAction(u"直线..(L)",self,)
-								self.L.triggered.connect(functools.partial(self.Plot,self.L))
-								self.S=QtGui.QAction(u"描点..(S)",self,)
-								self.S.triggered.connect(functools.partial(self.Plot,self.S))
-								self.SL=QtGui.QAction(u"直线+符号..(Y)",self,)
-								self.SL.triggered.connect(functools.partial(self.Plot,self.SL))
-								self.B=QtGui.QAction(u"条形图..(B)",self,)
-								self.B.triggered.connect(functools.partial(self.Plot,self.B))
-								self.C=QtGui.QAction(u"柱形图..(C)",self,)
-								self.C.triggered.connect(functools.partial(self.Plot,self.C))
-								self.E=QtGui.QAction(u"饼形图..(E)",self,)
-								self.E.triggered.connect(functools.partial(self.Plot,self.E))
-								self.PlotMenu.addAction(self.L)
-								self.PlotMenu.addSeparator()
-								self.PlotMenu.addAction(self.S)
-								self.PlotMenu.addSeparator()
-								self.PlotMenu.addAction(self.SL)
-								self.PlotMenu.addSeparator()
-								self.PlotMenu.addSeparator()
-								self.PlotMenu.addAction(self.B)
-								self.PlotMenu.addSeparator()
-								self.PlotMenu.addAction(self.C)
-								self.PlotMenu.addSeparator()
-								self.PlotMenu.addAction(self.E)
-								self.setX = QtGui.QAction(u"设为X", self)
-								self.setX.triggered.connect(functools.partial(self.addXYZ,self.setX))
-
-								self.setY = QtGui.QAction(u"设为Y", self)
-								self.setY.triggered.connect(functools.partial(self.addXYZ,self.setY))
-
-								self.setZ = QtGui.QAction(u"设为Z", self, triggered=self.addY)
-
-
-								self.process = QtGui.QAction(u"数据处理", self, triggered=self.Process)
-
-								self.corr = QtGui.QAction(u"相关系数", self, triggered=self.Process)
-
-
-								self.statisMenu=QtGui.QMenu(u"统计..(S)", self)
-								self.count=QtGui.QAction(u"计数..(非空值数)",self,)
-								self.count.triggered.connect(functools.partial(self.Stastics,self.count))
-								self.statisMenu.addAction(self.count)
-								self.description=QtGui.QAction(u"统计信息",self,)
-								self.description.triggered.connect(functools.partial(self.Stastics,self.description))
-								self.statisMenu.addAction(self.description)
-
-								"""
-								"""
-							设置水平表头的字体颜色
-							for x in range(self.dtableView.horizontalHeader().count()):
-								print x
-								headItem = self.dtableView.horizontalHeader().horizontalHeaderItem(x) #获得水平方向表头的Item对象
-								headItem.setFont(textFont) #设置字体
-								headItem.setBackgroundColor(QColor(0,60,10)) #设置单元格背景颜色
-								headItem.setTextColor(QColor(200,111,30)) #设置文字颜色
-								print x
-								"""
-
 								self.dtableView.show()
 								self.dlabel_Col.setText(str(self.dtableView.horizontalHeader().count()))
 								self.dlabel_Row.setText(str(self.idcount))
 								self.dlabel_time.setText(str(time.clock() - t1)[0:4] + 's')
-							#self.dtableView.doubleClicked(self.dtableView.currentIndex()).connect(self.doubleC2)
-							#print "sds"
-							#self.pyqtdb.close()
 							except Exception as err1:
 								pass
 						else:
@@ -1197,8 +1039,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 				if self.ms.GetConnect() == True:
 					self.ms.ExecNonQuery(sqlstr)
-					#self.ID=
-
 				#self.dcombox_index.addItems(self.ms.title)
 				self.dcombox_index.insertItems(0, self.ms.title)
 
@@ -1217,17 +1057,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 				if self.ms.GetConnect() == True:
 					for tab in range(len(self.ms.ExecQuery(sqlstr))):
 						tempresult.append(unicode(self.ms.ExecQuery(sqlstr)[tab][2]).encode("utf-8").decode("utf-8"))
-				#self.dcombox_index.addItems(self.ms.title)
 				self.dcombox_place.insertItems(0, tempresult)
-				#print tempresult
 			except:
 				war1 = Warning(self)
 				war1.label_warning.setText(u"   地点无法找到!")
 				war1.detail = u"      请选择正确的地点"
 				war1.exec_()
-
-			#for tab in range(len(self.ms.title)):
-			#self.dcombox_index.addItem(self.ms.title[tab])
 #dcombox_place
 	@pyqtSignature("")
 	def on_dpb_add_clicked(self):
@@ -1251,7 +1086,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 	@pyqtSignature("")
 	def on_dpb_delete1_clicked(self):
-		#print unicode(self.dlistWidget.tempitem.text()).encode("utf-8")
 		self.dlistWidget.takeItem(self.dlistWidget.row(self.dlistWidget.tempitem))
 #监听键盘事件
 	def keyPressEvent(self,event):
